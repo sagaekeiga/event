@@ -1,0 +1,57 @@
+
+
+<%= form_for(@event,  html: {class: 'ui form'}) do |f| %>
+  <div class="field">
+    <label>イベント名</label>
+      <%= f.text_field :name, class: '' %>
+  </div>
+  
+  <div class="field">
+    <label>内容</label>
+      <%= f.text_field :description, class: '' %>
+  </div>
+  
+  <div class="field">
+    <label>画像</label>
+      <%= f.text_field :image, class: '' %>
+  </div>
+  
+  <div class="field">
+    <label>HP</label>
+      <%= f.text_field :hp, class: '' %>
+  </div>
+  
+  <div class="field">
+    <label>責任者</label>
+      <%= f.text_field :leader, class: '' %>
+  </div>
+  
+  <div class="field">
+    <label>開催日</label>
+      <%= f.date_select :date, class: '' %>
+  </div>
+  
+  <div class="field">
+    <label>開始時間</label>
+      <%= f.time_select :time, class: '' %>
+  </div>
+  
+  <div class="field">
+    <label>定員</label>
+      <%= f.text_field :capacity, class: '' %>
+  </div>
+  
+  <div class="field">
+    <label>会場</label>
+      <%= f.text_field :place, class: '' %>
+  </div>
+  
+  <div class="field">
+    <label>連絡</label>
+      <%= f.text_field :contact, class: '' %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit "更新", class: 'ui button'%>
+  </div>
+<% end %>

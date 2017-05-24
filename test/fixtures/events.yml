@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  　　description: MyString
+  image: MyString
+  hp: MyString
+  leader: MyString
+  date: 2017-05-24
+  time: 2017-05-24 14:46:59
+  capacity: MyString
+  place: MyString
+  contact: MyString
+
+two:
+  name: MyString
+  　　description: MyString
+  image: MyString
+  hp: MyString
+  leader: MyString
+  date: 2017-05-24
+  time: 2017-05-24 14:46:59
+  capacity: MyString
+  place: MyString
+  contact: MyString

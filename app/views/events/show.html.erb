@@ -1,0 +1,94 @@
+<table class="ui celled striped table">
+  <thead>
+    <tr><th colspan="3">
+      <%= @event.name %>
+    </th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td class="collapsing">
+        <i class="image icon"></i> イメージ
+      </td>
+      <td class="ui image"><%= image_tag("#{@event.image}", :class => "center align")%></td>
+    </tr>
+    <tr>
+      <td>
+        <i class="file icon"></i> 内容
+      </td>
+      <td><%= @event.description %></td>
+    </tr>
+    <tr>
+      <td>
+        <i class="calendar icon"></i> 開催日
+      </td>
+      <td><%= @event.date.strftime("%Y年 %-m月 %-d日") %></td>
+    </tr>
+    <tr>
+      <td>
+        <i class="hourglass start icon"></i> 開始
+      </td>
+      <td><%= @event.time.strftime("%H時%M分") %></td>
+    </tr>
+    <tr>
+    <tr>
+      <td>
+        <i class="users icon"></i> 定員
+      </td>
+      <td><%= @event.capacity %></td>
+    </tr>
+    <tr>
+      <td>
+        <i class="desktop icon"></i> HP
+      </td>
+      <td><%= link_to "サイトへ飛ぶ", "#{@event.hp}", target: "_blank" %></td>
+    </tr>
+    <tr>
+      <td>
+        <i class="user icon"></i> 責任者
+      </td>
+      <td><%= @event.leader %></td>
+    </tr>
+    <tr>
+      <td>
+        <i class="phone icon"></i> 連絡
+      </td>
+      <td><%= @event.contact %></td>
+    </tr>
+    <tr>
+      <td>
+        <i class="share alternate icon"></i>
+      </td>
+      <td>
+         <%= render 'shares/social', event: @event %>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<script
+  type="text/javascript"
+  src="//platform.twitter.com/widgets.js"
+></script>
+
+<script
+  type="text/javascript"
+  src="http://b.st-hatena.com/js/bookmark_button.js"
+  charset="utf-8"
+  async="async"
+></script>
+
+<script
+  type="text/javascript"
+  src="https://apis.google.com/js/plusone.js"
+></script>
+
+
+
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.9&appId=1729629457300765";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
