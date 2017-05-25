@@ -100,6 +100,7 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.10.2)
     multi_json (1.12.1)
+    mysql2 (0.4.6)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (4.1.0)
@@ -192,6 +193,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
+  mysql2
   rails (= 5.0.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

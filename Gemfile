@@ -30,6 +30,8 @@ gem 'semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass.git'
 # Use Unicorn as the app server
 # gem 'unicorn'
 gem 'unicorn'
+gem 'mysql2'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
