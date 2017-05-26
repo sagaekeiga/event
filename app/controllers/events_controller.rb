@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
 
   before_filter :basic_auth, only: [:new, :edit, :manage, :destroy]
+  before_action :detect_variant
 
   def index
     @q = Event.search(params[:q])
@@ -59,6 +60,15 @@ class EventsController < ApplicationController
         def basic_auth
           authenticate_or_request_with_http_basic do |user,pass|
             user == "s19930528" && "s19930528"
+          end
+        end
+        
+        def detect_variant
+          case request.user_agent
+          when /ip(hone|od)/i
+            request.variant = :phone
+          when /android.+mobile/i
+            request.variant = :phone
           end
         end
 end
