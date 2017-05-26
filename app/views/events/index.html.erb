@@ -1,2 +1,31 @@
-<h1>Events#index</h1>
-<p>Find me in app/views/events/index.html.erb</p>
+
+<% @events.each do |event| %>
+<div class="d_inline center m_left_40">
+<div class="ui card d_inline">
+  <div class="image">
+    <%= image_tag event.image %>
+  </div>
+  <div class="content">
+    <%= link_to "#{event.name}", event, class: "btn btn-large" %>
+    <div class="meta">
+      <span class="date"><%= event.date.strftime("%Y年 %-m月 %-d日") %></span>
+    </div>
+    <div class="pa_2">
+        <% event.category_list.each do |tag| %>
+          <span class="ui teal tag label"><%= tag %></span>
+        <% end %>
+    </div>
+    
+    <div class="description">
+      <%= event.description.truncate(54) %>
+    </div>
+  </div>
+  <div class="extra content">
+    <a>
+      <i class="user icon"></i>
+      22 Friends
+    </a>
+  </div>
+</div>
+</div>
+<% end %>

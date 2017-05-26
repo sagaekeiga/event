@@ -5,10 +5,20 @@
     <label>イベント名</label>
       <%= f.text_field :name, class: '' %>
   </div>
+
+  <div class="field">
+    <label>対象</label>
+      <%= f.text_field :target, class: '' %>
+  </div>
+  
+  <div class="field">
+    <label>カテゴリ</label>
+    <%= text_field_tag 'event[category_list]', @event.category_list.join(',') %>
+  </div>
   
   <div class="field">
     <label>内容</label>
-      <%= f.text_field :description, class: '' %>
+      <%= f.text_area :description, class: '' %>
   </div>
   
   <div class="field">
@@ -33,7 +43,12 @@
   
   <div class="field">
     <label>開始時間</label>
-      <%= f.time_select :time, class: '' %>
+      <%= f.time_select :start, class: '' %>
+  </div>
+  
+  <div class="field">
+    <label>終了時間</label>
+      <%= f.time_select :close, class: '' %>
   </div>
   
   <div class="field">

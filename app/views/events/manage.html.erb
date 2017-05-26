@@ -3,12 +3,14 @@
   <thead>
     <tr><th>ID</th>
     <th>イベント名</th>
+    <th>カテゴリ</th>
     <th>内容</th>
     <th>画像</th>
     <th>HP</th>
     <th>責任者</th>
     <th>開催日</th>
     <th>開始時間</th>
+    <th>終了時間</th>
     <th>定員</th>
     <th>会場</th>
     <th>連絡</th>
@@ -19,18 +21,24 @@
     <tr>
      <td><%= event.id %></td>
      <td><%= link_to "#{event.name}", event %></td>
+     <td>
+        <% event.category_list.each do |tag| %>
+          <%= tag %>
+        <% end %>
+     </td>
      <td><%= event.description.truncate(10) %></td>
      <td><%= image_tag(event.image, :size => '50x50') %></td>
      <td><%= link_to"#{event.hp.truncate(10)}", "#{event.hp}" %></td>
      <td><%= event.leader %></td>
      <td><%= event.date.strftime("%Y年 %-m月 %-d日") %></td>
-     <td><%= event.time.strftime("%H時%M分") %></td>
+     <td><%= event.start.strftime("%H時%M分") %></td>
+     <td><%= event.close.strftime("%H時%M分") %></td>
      <td><%= event.capacity %></td>
      <td><%= event.place %></td>
      <td><%= event.contact %></td>
      <td>
       <%= link_to "編集", edit_event_path(event.id) %>
-		    <%= link_to "削除", event, method: :delete, data: { confirm: "本当に削除してもいいですか？" } %>
+      <%= link_to "削除", event, method: :delete, data: { confirm: "本当に削除してもいいですか？" } %>
      </td>
     </tr>
     <% end %>

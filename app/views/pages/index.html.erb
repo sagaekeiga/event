@@ -11,6 +11,12 @@
     <div class="meta">
       <span class="date"><%= event.date.strftime("%Y年 %-m月 %-d日") %></span>
     </div>
+    <div class="pa_2">
+        <% event.category_list.each do |tag| %>
+          <span class="ui teal tag label"><%= tag %></span>
+        <% end %>
+    </div>
+    
     <div class="description">
       <%= event.description.truncate(54) %>
     </div>
@@ -24,4 +30,3 @@
 </div>
 </div>
 <% end %>
-

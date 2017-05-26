@@ -1,17 +1,16 @@
 <div class="ui segment">
+  <h3 class="ui left aligned header">
+    <%= link_to "宮城のイベント（ベータ版）", root_path %>
+  </h3>
   <h3 class="ui right aligned header">
     <%= link_to "新規登録", "" %>
   </h3>
   <h3 class="ui center aligned header">
-    宮城のイベント（ベータ版）
-  </h3>
-  <h3 class="ui left aligned header">
-    <%= link_to "Home", root_path %>
-  </h3>
-  <h3 class="ui justified header">
-    This should take up the full width even if only one line
-  </h3>
-  <h3 class="ui center aligned header">
-    Center
+    <%= search_form_for @q do |f| %>
+      <div class="ui action input">
+        <%= f.search_field :name_or_description_cont %>
+        <%= f.submit "検索", class: "ui button teal" %>
+      </div>
+    <% end %>
   </h3>
 </div>

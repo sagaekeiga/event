@@ -7,10 +7,12 @@ class CreateEvents < ActiveRecord::Migration[5.0]
       t.string :hp
       t.string :leader
       t.date :date
-      t.time :time
+      t.time :start
+      t.time :close
       t.string :capacity
       t.string :place
       t.string :contact
+      t.string :target
 
       t.timestamps
     end

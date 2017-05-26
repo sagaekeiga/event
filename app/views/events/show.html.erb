@@ -13,6 +13,22 @@
     </tr>
     <tr>
       <td>
+        <i class="file icon"></i> カテゴリ
+      </td>
+      <td>
+        <% @event.category_list.each do |tag| %>
+          <span class="ui teal tag label"><%= tag %></span>
+        <% end %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <i class="child icon"></i> 対象
+      </td>
+      <td><%= @event.target %></td>
+    </tr>
+    <tr>
+      <td>
         <i class="file icon"></i> 内容
       </td>
       <td><%= @event.description %></td>
@@ -27,7 +43,13 @@
       <td>
         <i class="hourglass start icon"></i> 開始
       </td>
-      <td><%= @event.time.strftime("%H時%M分") %></td>
+      <td><%= @event.start.strftime("%H時%M分") %></td>
+    </tr>
+    <tr>
+      <td>
+        <i class="hourglass end icon"></i> 終了
+      </td>
+      <td><%= @event.close.strftime("%H時%M分") %></td>
     </tr>
     <tr>
     <tr>

@@ -4,9 +4,11 @@ Event.create!(name:  "第一回イベント",
              hp:              "http://qiita.com/k_s/items/21b0daa6f2c8dbd01834",
              leader:              "寒河江京我",
              date:              "#{Date.today}",
-             time:              "#{Time.now}",
+             start:              "#{Time.now}",
+             close:              "#{Time.now}",
              capacity:              "100",
              place:              "貸し会議室2F",
+             target:              "大学2年〜4年",
              contact:              "080-0980-0800")
              
              
@@ -16,9 +18,11 @@ Event.create!(name:  "第一回イベント",
              hp:              "http://qiita.com/k_s/items/21b0daa6f2c8dbd01834",
              leader:              "寒河江京我",
              date:              "#{Date.today}",
-             time:              "#{Time.now}",
+             start:              "#{Time.now}",
+             close:              "#{Time.now}",
              capacity:              "100",
              place:              "貸し会議室2F",
+             target:              "大学2年〜4年",
              contact:              "080-0980-0800")
 
 Event.create!(name:  "第一回イベント",
@@ -27,9 +31,11 @@ Event.create!(name:  "第一回イベント",
              hp:              "http://qiita.com/k_s/items/21b0daa6f2c8dbd01834",
              leader:              "寒河江京我",
              date:              "#{Date.today}",
-             time:              "#{Time.now}",
+             start:              "#{Time.now}",
+             close:              "#{Time.now}",
              capacity:              "100",
              place:              "貸し会議室2F",
+             target:              "大学2年〜4年",
              contact:              "080-0980-0800")
              
 
@@ -39,9 +45,11 @@ Event.create!(name:  "第一回イベント",
              hp:              "http://qiita.com/k_s/items/21b0daa6f2c8dbd01834",
              leader:              "寒河江京我",
              date:              "#{Date.today}",
-             time:              "#{Time.now}",
+             start:              "#{Time.now}",
+             close:              "#{Time.now}",
              capacity:              "100",
              place:              "貸し会議室2F",
+             target:              "大学2年〜4年",
              contact:              "080-0980-0800")
              
              
@@ -51,9 +59,11 @@ Event.create!(name:  "第一回イベント",
              hp:              "http://qiita.com/k_s/items/21b0daa6f2c8dbd01834",
              leader:              "寒河江京我",
              date:              "#{Date.today}",
-             time:              "#{Time.now}",
+             start:              "#{Time.now}",
+             close:              "#{Time.now}",
              capacity:              "100",
              place:              "貸し会議室2F",
+             target:              "大学2年〜4年",
              contact:              "080-0980-0800")
              
              
@@ -63,9 +73,11 @@ Event.create!(name:  "第一回イベント",
              hp:              "http://qiita.com/k_s/items/21b0daa6f2c8dbd01834",
              leader:              "寒河江京我",
              date:              "#{Date.today}",
-             time:              "#{Time.now}",
+             start:              "#{Time.now}",
+             close:              "#{Time.now}",
              capacity:              "100",
              place:              "貸し会議室2F",
+             target:              "大学2年〜4年",
              contact:              "080-0980-0800")
              
              
@@ -75,9 +87,11 @@ Event.create!(name:  "第一回イベント",
              hp:              "http://qiita.com/k_s/items/21b0daa6f2c8dbd01834",
              leader:              "寒河江京我",
              date:              "#{Date.today}",
-             time:              "#{Time.now}",
+             start:              "#{Time.now}",
+             close:              "#{Time.now}",
              capacity:              "100",
              place:              "貸し会議室2F",
+             target:              "大学2年〜4年",
              contact:              "080-0980-0800")
              
              
@@ -87,9 +101,11 @@ Event.create!(name:  "第一回イベント",
              hp:              "http://qiita.com/k_s/items/21b0daa6f2c8dbd01834",
              leader:              "寒河江京我",
              date:              "#{Date.today}",
-             time:              "#{Time.now}",
+             start:              "#{Time.now}",
+             close:              "#{Time.now}",
              capacity:              "100",
              place:              "貸し会議室2F",
+             target:              "大学2年〜4年",
              contact:              "080-0980-0800")
 
              

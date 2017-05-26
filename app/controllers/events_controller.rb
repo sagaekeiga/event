@@ -3,9 +3,12 @@ class EventsController < ApplicationController
   before_filter :basic_auth, only: [:new, :edit, :manage, :destroy]
 
   def index
+    @q = Event.search(params[:q])
+    @events = @q.result(distinct: true)
   end
   
   def new
+    @q = Event.search(params[:q])
     @event = Event.new
   end
   
@@ -18,6 +21,7 @@ class EventsController < ApplicationController
   end
   
   def edit
+    @q = Event.search(params[:q])
     @event = Event.find(params[:id])
   end
   
@@ -28,10 +32,12 @@ class EventsController < ApplicationController
   end
   
   def show
+    @q = Event.search(params[:q])
     @event = Event.find(params[:id])
   end
   
   def manage
+    @q = Event.search(params[:q])
     @events = Event.all
   end
   
@@ -47,7 +53,7 @@ class EventsController < ApplicationController
       private
       
         def event_params
-          params.require(:event).permit(:name, :description, :image, :hp, :leader, :date, :time, :capacity, :place, :contact)
+          params.require(:event).permit(:name, :description, :image, :hp, :leader, :date, :time, :capacity, :place, :contact, :category_list, :target)
         end
  
         def basic_auth

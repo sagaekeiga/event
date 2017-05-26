@@ -31,6 +31,8 @@ gem 'semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass.git'
 # gem 'unicorn'
 gem 'unicorn'
 gem 'mysql2'
+gem 'acts-as-taggable-on'
+gem "ransack"
 
 
 # Use Capistrano for deployment
