@@ -25,8 +25,9 @@ ActiveRecord::Schema.define(version: 20170525140546) do
     t.string   "place"
     t.string   "contact"
     t.string   "target"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "rank",        default: 0, null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "taggings", force: :cascade do |t|

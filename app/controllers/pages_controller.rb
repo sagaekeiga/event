@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   def index
     @events = Event.all
     @q = Event.search(params[:q])
+    @ranks = Event.all.order("rank desc").first(10)
   end
   
   def entertainment

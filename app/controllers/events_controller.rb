@@ -35,6 +35,9 @@ class EventsController < ApplicationController
   def show
     @q = Event.search(params[:q])
     @event = Event.find(params[:id])
+    @rank = REDIS.zincrby "events/all/#{Date.today.to_s}", 1, @event.id
+    @event.rank = @rank
+    @event.save!
   end
   
   def manage

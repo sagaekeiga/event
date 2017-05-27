@@ -32,8 +32,8 @@
           </div>
           <div class="extra content">
             <a>
-              <i class="user icon"></i>
-              22 Friends
+              <i class="unhide icon"></i>
+              <%= event.rank %>
             </a>
           </div>
         </div>
@@ -42,7 +42,19 @@
         
     </div>
     <div class="two wide column">
-      <img>
+      <div class="ui segments">
+        <div class="ui segment">
+          <p><i class="trophy icon"></i>ランキング</p>
+        </div>
+
+        <% int = 0 %>
+        <% @ranks.each do |rank| %>
+          <div class="ui segment">
+            <p><%= int += 1 %>　<%= rank.name.truncate(7) %></p>
+          </div>
+        <% end %>
+        
+      </div>
     </div>
   </div>
   <div class="row">

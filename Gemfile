@@ -33,7 +33,7 @@ gem 'unicorn'
 gem 'mysql2'
 gem 'acts-as-taggable-on'
 gem "ransack"
-
+gem 'redis'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

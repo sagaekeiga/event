@@ -13,6 +13,7 @@ class CreateEvents < ActiveRecord::Migration[5.0]
       t.string :place
       t.string :contact
       t.string :target
+      t.integer :rank,              null: false, default: 0
 
       t.timestamps
     end
